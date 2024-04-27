@@ -26,3 +26,30 @@ Random Number Device
 * change baud rates: [1]9200, [2]8800, [3]8400, [5]7600, [9]600
 
   
+### Building
+* used an Ardunio Nano for prototyping
+  * check: old bootloader?
+* Arduino Pro Mini / Pollin Entwicklungsboard ATmega 168PA
+  * check: 328 / 168? 3.3 V / 5 V?
+ 
+* programming via FTDI Cable / USB module 
+
+![pro mini with usb serial adapter](./pro-mini-prgm.jpg)
+* building stand-alone device with MAX232 module
+  * case?
+  * plug for power supply wobbly, solder
+    
+![pro mini with rs232 adapter](./pro-mini-rs232.jpg)
+
+* output in terminal window
+
+![screenshot with output](./screenshot.JPG) 
+
+
+### Todo / Open:
+* external analog noise source?
+* case
+
+   
+
+
