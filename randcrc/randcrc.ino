@@ -76,13 +76,6 @@ void getRand() {
 
   uint8_t data = (byte)(val & 0xFF);
 
-  if (debug) {
-    Serial.print(val, HEX);
-    Serial.print("-");
-    Serial.print(data, HEX);
-    Serial.print(" -> ");
-  }
-
   crc = crc32(crc, data);
 
   if (crc < min)
@@ -90,8 +83,14 @@ void getRand() {
   if (crc > max)
     max = crc;
 
-  sprintf(buff, format, crc);
-  Serial.println(buff);
+  if (debug) {
+    Serial.print(val, HEX);
+    Serial.print(" ");
+    Serial.println(data, HEX);
+  } else {
+    sprintf(buff, format, crc);
+    Serial.println(buff);
+  }
 }
 
 
